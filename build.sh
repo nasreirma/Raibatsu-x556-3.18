@@ -1,8 +1,17 @@
- export SUBARCH=arm64
- 
- #Defconfig for X556 (originally Moto C)
+#!/bin/bash
 
- make -C $PWD O=$PWD/out ARCH=arm 64 rlk6737m_open_n_defconfig
- #make ARCH=arm64 wt6737m65_n_defconfig
- 
- make -j4 -C $PWD O=$PWD/out ARCH=arm64
+#Mysteryagr
+#Compile kernel with a build script to make things simple
+
+mkdir -p out
+
+export USE_CCACHE=1
+
+export ARCH=arm ARCH_MTK_PLATFORM=mt6735
+
+#Defconfig for Moto C
+make -C $PWD O=$PWD/out ARCH=arm64 rlk6737m_open_n_defconfig
+#make ARCH=arm wt6737m_35_n_defconfig
+
+make -j4 -C $PWD O=$PWD/out ARCH=arm
+#make -j4 ARCH=arm
