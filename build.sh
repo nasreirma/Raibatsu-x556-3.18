@@ -13,5 +13,5 @@ export ARCH=arm ARCH_MTK_PLATFORM=mt6737M
 make -C $PWD O=$PWD/out ARCH=arm64 rlk6737m_open_n_defconfig
 #make ARCH=arm wt6737m_35_n_defconfig
 
-make -j4 -C $PWD O=$PWD/out ARCH=arm
+make -j4 -C $PWD O=$PWD/out ARCH=arm64
 #make -j4 ARCH=arm
