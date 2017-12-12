@@ -7,11 +7,12 @@ mkdir -p out
 
 export USE_CCACHE=1
 
-export ARCH=arm ARCH_MTK_PLATFORM=mt6737M
+export ARCH=arm ARCH_MTK_PLATFORM=mt6735
+export SUBARCH=arm64
 
-#Defconfig for Moto C
+#Defconfig for HOT 4 PRO
 make -C $PWD O=$PWD/out ARCH=arm64 rlk6737m_open_n_defconfig
-#make ARCH=arm wt6737m_35_n_defconfig
+#make ARCH=arm wt6737m_n_defconfig
 
-make -j4 -C $PWD O=$PWD/out ARCH=arm
-#make -j4 ARCH=arm
+make -j4 -C $PWD O=$PWD/out ARCH=arm64
+#make -j4 ARCH=arm64
