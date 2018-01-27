@@ -3,6 +3,9 @@
 #Mysteryagr
 #Compile kernel with a build script to make things simple
 
+export KBUILD_BUILD_USER="NasreIrma"
+export KBUILD_BUILD_HOST="TEAM-HOT"
+
 mkdir -p out
 
 export USE_CCACHE=1
